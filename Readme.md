@@ -40,7 +40,7 @@ Deliver: Put all of my findings together in a final report where I make things a
 Int64Index: 2755 entries, 264546 to 253411
 Data columns (total 148 columns):
  #  |  Column                                       | Dtype  
---- |  ------                                       | -----  
+--- |  ------                                       | ---------  
  0  |  metacritic                                   | float64
  1  |  playtime                                     | int64  
  2  |  achievements_count                           | int64  
