@@ -1,6 +1,9 @@
 #                                             Identifying Must Play Games:
                                            
   In this project I will be looking at video game data I pulled from kaggle to learn more about what aspects of a game have the most impact on it chance to be categorized as a 'must play game' which is a standard defined by metacritic as a game that has achieved a metacritic rating of and over 90%. These ratings are achieved by taking wighted averages of ratings where the weight is based upon the 'quality' and 'stature' of the critic . It will be useful to  first identify features that are relevant to a games 'must play' status by exploring the data and running statistical tests on different attributes of my dataset. I will than use these relevant features in order to create several models that I can modify until I find the parameters that most accurately predict a games 'must play' status.
+
+  #                                        Link To Canva Presentation
+              https://www.canva.com/design/DAFU3edfr0I/kNdZTDzwHHSnKfH5UhxQZQ/edit
                                            
 #                                               Pipeline:
 Plan: My plan is to create models that will accurately predict 'must play' games by using the features in my videogame dataset I have pulled from kaggle.
@@ -39,54 +42,50 @@ Deliver: Put all of my findings together in a final report where I make things a
 <class 'pandas.core.frame.DataFrame'>
 Int64Index: 2755 entries, 264546 to 253411
 Data columns (total 148 columns):
- #  |  Column                                       | Dtype  
---- |  ------                                       | ---------  
- 0  |  metacritic                                   | float64
- 1  |  playtime                                     | int64  
- 2  |  achievements_count                           | int64  
- 3  |  game_series_count                            | int64  
- 4  |  added_status_yet                             | int64  
- 5  |  added_status_toplay                          | int64  
- 6  |  metacritic_good_game                         | float64
- 7  |  Publisher_Square_Enix                        | object 
- 8  |  Publisher_Electronic_Arts                    | object 
- 9  |  Publisher_Enhance_Games                      | object 
- 10 |  Publisher_Valve                              | object 
- 11 |  Publisher_Klei_Entertainment                 | object 
- 12 |  Publisher_LucasArts_Entertainment            | object 
- 13 |  Publisher_8-4                                | object 
- 14 |  Publisher_tobyfox                            | object 
- 15 |  Publisher_Aspyr                              | object 
- 16 |  Publisher_Bethesda_Softworks                 | object 
- 17 |  Publisher_Funcom                             | object 
- 18 |  Publisher_Focus_Home_Interactive             | object 
- 19 |  Publisher_Warner_Bros._Interactive           | object 
- 20 |  Publisher_Activison                          | object 
- 21 |  Publisher_Ubisoft_Entertainment              | object 
- 22 |  Publisher_Interplay_Productions              | object 
- 23 |  Publisher_Matt_Makes_Games                   | object 
- 24 |  Publisher_Blizzard_Entertainment             | object 
- 25 |  Publisher_Sony_Computer_Entertainment        | object 
- 26 |  Publisher_CD_PROJEKT_RED                     | object 
- 27 |  Publisher_Rockstar_Games                     | object 
- 28 |  Publisher_Rare                               | object 
- 29 |  Publisher_Konami                             | object 
- 30 |  Publisher_GT_Interactive_Software            | object 
- 31 |  Publisher_MacSoft                            | object 
- 32 |  Publisher_Annapurna_Games                    | object 
- 33 |  Publisher_Bandai_Namco_Entertainment         | object 
- 34 |  Publisher_Atlus                              | object 
- 35 |  Publisher_Rocketcat                          | object 
- 36 |  Publisher_1C-SoftClub                        | object 
- 37 |  Publisher_EA_Sports_BIG                      | object 
- 38 |  Publisher_Corporation_Polytron               | object 
- 39 |  Publisher_FromSoftware                       | object 
- 40 |  Publisher_Paradox_Interactive                | object 
- 41 |  Publisher_Buka_Entertainment                 | object 
- 42 |  Publisher_Sony_Interactive_Entertainment     | object 
- 43 |  Publisher_Deep_Silver                        | object 
- 44 |  Publisher_Number_None                        | object 
- 45 |  Publisher_id_Software                        | object 
+ #  |  Column                                       | Dtype  |
+--- |  ------                                       | ---------|
+ 0  |  metacritic                                   | float64|
+ 1  |  playtime                                     | int64  |
+ 2  |  achievements_count                           | int64  |
+ 3  |  game_series_count                            | int64  |
+ 4  |  added_status_yet                             | int64  |
+ 5  |  added_status_toplay                          | int64  |
+ 6  |  metacritic_good_game                         | float64|
+ 7  |  Publisher_Square_Enix                        | object |
+ 8  |  Publisher_Electronic_Arts                    | object |
+ 9  |  Publisher_Enhance_Games                      | object |
+ 10 |  Publisher_Valve                              | object |
+ 11 |  Publisher_Klei_Entertainment                 | object |
+ 12 |  Publisher_LucasArts_Entertainment            | object |
+ 13 |  Publisher_8-4                                | object |
+ 14 |  Publisher_tobyfox                            | object |
+ 15 |  Publisher_Aspyr                              | object |
+ 16 |  Publisher_Bethesda_Softworks                 | object |
+ 17 |  Publisher_Funcom                             | object |
+ 18 |  Publisher_Focus_Home_Interactive             | object |
+ 19 |  Publisher_Warner_Bros._Interactive           | object |
+ 20 |  Publisher_Activison                          | object |
+ 21 |  Publisher_Ubisoft_Entertainment              | object |
+ 22 |  Publisher_Interplay_Productions              | object |
+ 23 |  Publisher_Matt_Makes_Games                   | object |
+ 24 |  Publisher_Blizzard_Entertainment             | object |
+ 25 |  Publisher_Sony_Computer_Entertainment        | object |
+ 26 |  Publisher_CD_PROJEKT_RED                     | object |
+ 28 |  Publisher_Rare                               | object |
+ 29 |  Publisher_Konami                             | object |
+ 30 |  Publisher_GT_Interactive_Software            | object |
+ 31 |  Publisher_MacSoft                            | object |
+ 32 |  Publisher_Annapurna_Games                    | object |
+ 33 |  Publisher_Bandai_Namco_Entertainment         | object |
+ 34 |  Publisher_Atlus                              | object |
+ 38 |  Publisher_Corporation_Polytron               | object |
+ 39 |  Publisher_FromSoftware                       | object |
+ 40 |  Publisher_Paradox_Interactive                | object |
+ 41 |  Publisher_Buka_Entertainment                 | object |
+ 42 |  Publisher_Sony_Interactive_Entertainment     | object |
+ 43 |  Publisher_Deep_Silver                        | object |
+ 44 |  Publisher_Number_None                        | object |
+ 45 |  Publisher_id_Software                        | object |
  46 |  Publisher_Asmodee_Digital                    | object 
  47 |  Publisher_Nightdive_Studios                  | object 
  48 |  Publisher_Microsoft_Studios                  | object 
